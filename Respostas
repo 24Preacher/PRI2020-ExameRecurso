@@ -1,0 +1,29 @@
+2-
+2.1)
+db.teams.count()
+
+2.2)
+db.teams.distinct("team").sort()
+
+2.3)
+db.teams.aggregate([
+                    {"$unwind": "$members"},
+                    {"$group": {
+                        _id: "",
+                        "numAlunos": {"$sum":1}}
+                    },
+                    {"$project": {
+                        _id: 0,
+                        "numAlunos": 1}
+                    }
+])
+
+2.4)
+db.teams.aggregate([
+                    {"$unwind": "$members"},
+                    {"$project": {
+                        _id: 0,
+                        "numero": "$members.id",
+                        "nome": "$members.name"}
+                    }
+])

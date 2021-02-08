@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>PRI2020-ExameRecurso</key>
+        <title>Exame de Recurso de PRI</title>
+        <bdate>8 Fevereiro</bdate>
+        <edate>8 Fevereiro</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="a80580">
+            <name>Pedro Medeiros</name>
+            <email>a80580@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <paragrafo>Pergunta 1</paragrafo>
+        <paragrafo>mongoimport -d PEI2020 -c teams --jsonArray PEI-teams.json </paragrafo>
+        <paragrafo>Pergunta 2</paragrafo>
+        <paragrafo>As respostas à pergunta 2 encontram-se no ficheiro  Respostas.txt </paragrafo>
+    </abstract>
+</pr>
