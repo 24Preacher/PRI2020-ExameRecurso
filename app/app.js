@@ -3,26 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
-
-
-app.use(function(req,res,next){
-  axios.get('http://localhost:8000/api/token')
-      .then(dados => {
-          res.cookie('token', dados.data.token, {
-              expires: new Date(Date.now() + '1h'),
-              secure: false,
-              httpOnly: true
-          });
-          
-          next()
-      })
-      .catch(erro => res.render('error', {error: erro}))
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
